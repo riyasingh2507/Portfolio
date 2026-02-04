@@ -1,20 +1,20 @@
-import SectionTitle from "../components/sectionTitle";
+import SectionTitle from "../components/SectionTitle";
 
 const projects = [
   {
-    title: "Teleconsultation Platform",
-    desc: "Real-time doctor-patient consultation system with secure messaging and live communication.",
-    tech: "Node.js, React, Socket.io",
+    title: "Health Sync",
+    desc: "Comprehensive health data synchronization system enabling seamless integration and real-time processing of health information across multiple platforms. Built with robust backend architecture and secure data handling protocols.",
+    tech: "Node.js, React.js, MongoDB, WebSocket",
   },
   {
-    title: "Health Sync System",
-    desc: "Backend service for syncing, processing, and validating health data across systems.",
-    tech: "Node.js, MongoDB, APIs",
+    title: "E-Port",
+    desc: "Enterprise portal solution designed for healthcare workflows, featuring intuitive UI/UX, secure authentication, and efficient data management. Delivers seamless user experience with optimized performance and scalability.",
+    tech: "Vue.js, Node.js, Express.js, MongoDB",
   },
   {
-    title: "ERP / EHR Modules",
-    desc: "Scalable ERP and EHR modules built for healthcare workflows and data compliance.",
-    tech: "React, Vue.js, Node.js",
+    title: "SIAP",
+    desc: "Scalable healthcare application platform with comprehensive EHR capabilities, real-time features, and secure system integration. Built to handle complex healthcare workflows with high reliability and compliance standards.",
+    tech: "React.js, Node.js, MongoDB, TypeScript",
   },
 ];
 
@@ -22,8 +22,8 @@ const Projects = () => {
   return (
     <section>
       <SectionTitle
-        title="Other Projects"
-        subtitle="Additional systems and applications I’ve worked on in healthcare and enterprise domains."
+        title="Additional Projects"
+        subtitle="A collection of production-ready healthcare technology solutions and enterprise applications."
       />
 
       <div
@@ -36,18 +36,32 @@ const Projects = () => {
         {projects.map((project) => (
           <div
             key={project.title}
+            className="card"
             style={{
-              background: "var(--bg-secondary)",
-              padding: "25px",
-              borderRadius: "var(--card-radius)",
-              border: "1px solid var(--border-color)",
+              padding: "2rem",
             }}
           >
-            <h3 style={{ marginBottom: "10px" }}>{project.title}</h3>
-            <p style={{ marginBottom: "15px" }}>{project.desc}</p>
-            <p style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>
-              {project.tech}
-            </p>
+            <h3 style={{ marginBottom: "1rem", color: "var(--accent-primary)" }}>
+              {project.title}
+            </h3>
+            <p style={{ marginBottom: "1.5rem", lineHeight: "1.8" }}>{project.desc}</p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
+              {project.tech.split(", ").map((tech) => (
+                <span
+                  key={tech}
+                  style={{
+                    padding: "0.4rem 0.8rem",
+                    borderRadius: "6px",
+                    background: "rgba(99, 102, 241, 0.1)",
+                    color: "var(--accent-primary)",
+                    fontSize: "0.85rem",
+                    fontWeight: 500,
+                  }}
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
         ))}
       </div>

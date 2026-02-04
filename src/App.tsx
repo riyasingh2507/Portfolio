@@ -1,5 +1,8 @@
 import './App.css'
+import Footer from './components/Footer';
 import Achievements from './sections/Achievements';
+import Contact from './sections/Contact';
+import Education from './sections/Education';
 import Experience from './sections/Experiences';
 import FeaturedProject from './sections/FeaturedProject';
 // import Navbar from './components/navbar';
@@ -18,8 +21,11 @@ function App() {
       <FeaturedProject />
       <Skills />
       <Projects />
+      <Education />
       <Achievements />
       <HumanSide />
+      <Contact />
+      <Footer />
     </>
   );
 }

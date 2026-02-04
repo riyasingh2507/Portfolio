@@ -1,18 +1,22 @@
 :root {
   /* Backgrounds */
-  --bg-primary: #0f172a;   /* main dark */
-  --bg-secondary: #111827; /* cards */
+  --bg-primary: #0a0e1a;   /* deeper dark */
+  --bg-secondary: #1a1f2e; /* cards with subtle elevation */
 
   /* Text */
-  --text-primary: #e5e7eb;
-  --text-secondary: #9ca3af;
-  --text-muted: #6b7280;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
 
-  /* Accent (health + tech vibe) */
+  /* Accent (professional tech vibe) */
   --accent-primary: #6366f1; /* indigo */
-  --accent-secondary: #22c55e; /* soft green */
+  --accent-secondary: #8b5cf6; /* purple */
+  --accent-tertiary: #06b6d4; /* cyan */
 
   /* UI */
-  --border-color: #1f2933;
-  --card-radius: 14px;
+  --border-color: #2d3748;
+  --card-radius: 12px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
 }

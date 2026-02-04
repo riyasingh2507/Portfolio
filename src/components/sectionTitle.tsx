@@ -5,10 +5,17 @@ interface Props {
 
 const SectionTitle = ({ title, subtitle }: Props) => {
   return (
-    <div style={{ marginBottom: "40px" }}>
-      <h2>{title}</h2>
+    <div style={{ marginBottom: "3rem" }}>
+      <h2 style={{ marginBottom: "1rem" }}>{title}</h2>
       {subtitle && (
-        <p style={{ maxWidth: "600px", color: "var(--text-muted)" }}>
+        <p
+          style={{
+            maxWidth: "700px",
+            color: "var(--text-muted)",
+            fontSize: "1.1rem",
+            lineHeight: "1.7",
+          }}
+        >
           {subtitle}
         </p>
       )}

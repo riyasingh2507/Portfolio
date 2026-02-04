@@ -1,21 +1,21 @@
-import SectionTitle from "../components/sectionTitle";
+import SectionTitle from "../components/SectionTitle";
 
 const cards = [
   {
-    title: "Health Tech Development",
-    desc: "Built EHR, health tracking, and wearable-integrated applications handling live physiological data.",
+    title: "Healthcare Technology Development",
+    desc: "Architect and develop enterprise-grade healthcare platforms including Electronic Health Record (EHR) systems, health monitoring applications, and wearable device integrations. Specialize in processing continuous physiological data streams with high reliability and compliance standards.",
   },
   {
-    title: "Backend & APIs",
-    desc: "Designed scalable Node.js backends, REST APIs, and complex data-processing logic.",
+    title: "Backend Architecture & API Development",
+    desc: "Design and implement scalable backend systems using Node.js and Express.js. Build robust RESTful APIs with complex business logic, optimized database queries, secure authentication mechanisms, and seamless third-party service integrations.",
   },
   {
-    title: "Real-Time Systems",
-    desc: "Implemented Socket.io & WebSockets for live health data, messaging, and teleconsultation.",
+    title: "Real-Time System Architecture",
+    desc: "Engineer real-time communication systems leveraging Socket.io and WebSocket protocols. Implement live data streaming pipelines for health metrics, real-time messaging systems, and synchronous teleconsultation platforms with low-latency requirements.",
   },
   {
-    title: "Smart Features",
-    desc: "Working on AI coach logic, insights generation, and personalized health recommendations.",
+    title: "AI-Driven Feature Development",
+    desc: "Develop intelligent healthcare features powered by machine learning algorithms. Create personalized health insights, predictive analytics for recovery patterns, and adaptive coaching systems that learn from user behavior and physiological data.",
   },
 ];
 
@@ -23,8 +23,8 @@ const WhatIDo = () => {
   return (
     <section>
       <SectionTitle
-        title="What I Do"
-        subtitle="I specialize in building production-ready systems with a strong focus on health-tech and real-time data."
+        title="Core Expertise"
+        subtitle="Specialized in architecting and developing production-ready software systems with expertise in healthcare technology, real-time data processing, and scalable backend infrastructure."
       />
 
       <div
@@ -37,15 +37,15 @@ const WhatIDo = () => {
         {cards.map((card) => (
           <div
             key={card.title}
+            className="card"
             style={{
-              background: "var(--bg-secondary)",
-              padding: "25px",
-              borderRadius: "var(--card-radius)",
-              border: "1px solid var(--border-color)",
+              padding: "2rem",
             }}
           >
-            <h3 style={{ marginBottom: "10px" }}>{card.title}</h3>
-            <p>{card.desc}</p>
+            <h3 style={{ marginBottom: "1rem", color: "var(--accent-primary)" }}>
+              {card.title}
+            </h3>
+            <p style={{ lineHeight: "1.8", fontSize: "1.05rem" }}>{card.desc}</p>
           </div>
         ))}
       </div>

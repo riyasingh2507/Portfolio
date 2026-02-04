@@ -1,11 +1,9 @@
-import SectionTitle from "../components/sectionTitle";
+import SectionTitle from "../components/SectionTitle";
 
 const achievements = [
-  "Ranked 1st in M.Sc. Information Technology (2021–2023)",
-  "Awarded 2nd Rank in National Seminar on Application of Mathematics",
-  "Solved 100+ problems on LeetCode",
-  "NPTEL Certified – Introduction to Web Development",
-  "Coursera Certified – JavaScript & Web Development",
+  "Awarded 2nd Rank in National Seminar on Application of Mathematics — Recognized for excellence in mathematical problem-solving and algorithmic thinking",
+  "NPTEL Online Certificate — Introduction to Web Development — Comprehensive understanding of modern web development principles and practices",
+  "Coursera Certifications — Introduction to Web Development & Interactivity with JavaScript — Advanced proficiency in JavaScript programming and full-stack web development",
 ];
 
 const Achievements = () => {
@@ -13,21 +11,19 @@ const Achievements = () => {
     <section>
       <SectionTitle
         title="Achievements & Certifications"
-        subtitle="Academic excellence, competitive programming, and continuous learning."
+        subtitle="Recognition for technical excellence, continuous learning, and contributions to software engineering."
       />
 
       <div
+        className="card"
         style={{
-          background: "var(--bg-secondary)",
-          padding: "30px",
-          borderRadius: "var(--card-radius)",
-          border: "1px solid var(--border-color)",
+          padding: "2.5rem",
           maxWidth: "900px",
         }}
       >
-        <ul style={{ paddingLeft: "20px", lineHeight: "1.9" }}>
+        <ul style={{ paddingLeft: 0, lineHeight: "1.9" }}>
           {achievements.map((item) => (
-            <li key={item}>{item}</li>
+            <li key={item} style={{ marginBottom: "1rem" }}>{item}</li>
           ))}
         </ul>
       </div>

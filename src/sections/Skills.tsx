@@ -1,4 +1,4 @@
-import SectionTitle from "../components/sectionTitle";
+import SectionTitle from "../components/SectionTitle";
 
 const SkillGroup = ({
   title,
@@ -7,25 +7,23 @@ const SkillGroup = ({
   title: string;
   skills: string[];
 }) => (
-  <div
-    style={{
-      background: "var(--bg-secondary)",
-      padding: "25px",
-      borderRadius: "var(--card-radius)",
-      border: "1px solid var(--border-color)",
-    }}
-  >
-    <h3 style={{ marginBottom: "15px" }}>{title}</h3>
-    <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+  <div className="card" style={{ padding: "2rem" }}>
+    <h3 style={{ marginBottom: "1.25rem", color: "var(--accent-primary)" }}>
+      {title}
+    </h3>
+    <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
       {skills.map((skill) => (
         <span
           key={skill}
           style={{
-            padding: "6px 12px",
-            borderRadius: "20px",
-            background: "rgba(99,102,241,0.1)",
+            padding: "0.6rem 1.2rem",
+            borderRadius: "8px",
+            background: "rgba(99, 102, 241, 0.15)",
             color: "var(--accent-primary)",
-            fontSize: "0.9rem",
+            fontSize: "0.95rem",
+            fontWeight: 500,
+            border: "1px solid rgba(99, 102, 241, 0.3)",
+            transition: "all 0.2s ease",
           }}
         >
           {skill}
@@ -39,8 +37,8 @@ const Skills = () => {
   return (
     <section>
       <SectionTitle
-        title="Skills"
-        subtitle="Technologies and tools I use to build scalable, production-ready applications."
+        title="Technical Skills"
+        subtitle="Technologies, frameworks, and tools I leverage to architect and develop scalable, production-ready software systems."
       />
 
       <div
@@ -51,32 +49,27 @@ const Skills = () => {
         }}
       >
         <SkillGroup
-          title="Frontend"
-          skills={["React.js", "Vue.js", "HTML", "CSS"]}
+          title="Programming Languages & Frameworks"
+          skills={["JavaScript", "TypeScript", "Node.js", "React.js", "Vue.js", "Express.js"]}
         />
 
         <SkillGroup
-          title="Backend"
-          skills={["Node.js", "Express.js", "REST APIs", "WebSockets"]}
-        />
-
-        <SkillGroup
-          title="Auth & Real-Time"
-          skills={["Firebase Auth", "Social Login", "Socket.io"]}
+          title="Web Technologies"
+          skills={["HTML", "CSS", "WebSocket", "RESTful APIs", "Ionic Framework"]}
         />
 
         <SkillGroup
           title="Databases & Tools"
-          skills={["MongoDB", "GitHub", "TypeScript", "Ionic"]}
+          skills={["MongoDB", "Git", "GitHub", "Version Control", "Agile Development"]}
         />
 
         <SkillGroup
           title="Domain Expertise"
           skills={[
-            "Health Tech",
-            "Teleconsultation",
-            "Wearable Data",
-            "Real-Time Systems",
+            "EHR Systems",
+            "Teleconsultation Platforms",
+            "Health Tracking Applications",
+            "Real-Time Data Processing",
           ]}
         />
       </div>
