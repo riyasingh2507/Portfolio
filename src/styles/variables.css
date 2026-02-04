@@ -1,0 +1,22 @@
+:root {
+  /* Backgrounds */
+  --bg-primary: #0a0e1a;   /* deeper dark */
+  --bg-secondary: #1a1f2e; /* cards with subtle elevation */
+
+  /* Text */
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+
+  /* Accent (professional tech vibe) */
+  --accent-primary: #6366f1; /* indigo */
+  --accent-secondary: #8b5cf6; /* purple */
+  --accent-tertiary: #06b6d4; /* cyan */
+
+  /* UI */
+  --border-color: #2d3748;
+  --card-radius: 12px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
