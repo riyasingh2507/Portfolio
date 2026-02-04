@@ -1,8 +1,10 @@
 import './App.css'
+import Achievements from './sections/Achievements';
 import Experience from './sections/Experiences';
 import FeaturedProject from './sections/FeaturedProject';
 // import Navbar from './components/navbar';
 import Hero from './sections/Hero'
+import HumanSide from './sections/HumanSide';
 import Projects from './sections/Projects';
 import Skills from './sections/Skills';
 import WhatIDo from './sections/WhatIDo';
@@ -16,6 +18,8 @@ function App() {
       <FeaturedProject />
       <Skills />
       <Projects />
+      <Achievements />
+      <HumanSide />
     </>
   );
 }
