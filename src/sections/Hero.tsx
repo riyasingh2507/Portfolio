@@ -1,99 +1,73 @@
 import cvPdf from "../assets/Singh Riya Anand Resume.pdf";
 
+const quickStats = [
+  "3+ years building production web apps",
+  "Healthcare, ERP/EHR and management systems",
+  "React.js, Vue.js, Node.js and MongoDB",
+];
+
 const Hero = () => {
   return (
-    <section
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        alignItems: "center",
-        paddingTop: "120px",
-      }}
-    >
-      <div style={{ maxWidth: "900px", width: "100%" }}>
-        <p
-          style={{
-            color: "var(--accent-primary)",
-            fontSize: "1.1rem",
-            fontWeight: 600,
-            marginBottom: "1rem",
-            letterSpacing: "0.05em",
-            textTransform: "uppercase",
-          }}
-        >
-          Full Stack Software Engineer
-        </p>
+    <section className="hero-section">
+      <div className="hero-grid">
+        <div>
+          <p className="eyebrow">Software Engineer • Full Stack Developer</p>
 
-        <h1>
-          Hi, I'm <span style={{ color: "var(--accent-primary)" }}>Riya Singh</span>
-        </h1>
+          <h1>
+            Riya Singh builds reliable products for healthcare, operations, and
+            real-time user experiences.
+          </h1>
 
-        <h2
-          style={{
-            fontSize: "clamp(1.5rem, 3vw, 2rem)",
-            fontWeight: 600,
-            color: "var(--text-secondary)",
-            marginTop: "1rem",
-            marginBottom: "1.5rem",
-            maxWidth: "850px",
-            lineHeight: "1.3",
-          }}
-        >
-          Building Scalable Healthcare Solutions & Real-Time Systems
-        </h2>
+          <p className="hero-lead">
+            Full Stack Software Engineer based in Ahmedabad, crafting scalable
+            applications with React.js, Vue.js, Node.js, and MongoDB. My work
+            spans wearable health platforms, teleconsultation modules, and
+            business systems that need clean interfaces and dependable backend
+            logic.
+          </p>
 
-        <p style={{ 
-          marginTop: "1.5rem", 
-          fontSize: "1.05rem", 
-          lineHeight: "1.85", 
-          maxWidth: "850px",
-          wordWrap: "break-word",
-          overflowWrap: "break-word",
-          hyphens: "auto"
-        }}>
-          Versatile Full Stack Software Engineer with practical experience crafting scalable web
-          applications using <strong style={{ color: "var(--text-primary)" }}>React.js, Vue.js, Node.js, and MongoDB</strong>.
-          I bring deep expertise in <strong style={{ color: "var(--text-primary)" }}>EHR-related fields</strong>, particularly
-          teleconsultation, health tracking, and live data handling. Skilled in creating full-cycle
-          solutions and working closely with cross-disciplinary teams in fast-paced agile environments.
-        </p>
+          <p className="hero-supporting">
+            I currently work on Band Sync at Estatic Infotech, where I help
+            build live wearable data flows, AI-driven health insights, and
+            EHR-aligned features. Earlier, I delivered ERP/EHR, education, visa
+            management, and inventory platforms across multiple client projects
+            at The One Technologies.
+          </p>
 
-        <p style={{ 
-          marginTop: "1.5rem", 
-          fontSize: "1.05rem", 
-          lineHeight: "1.85", 
-          maxWidth: "850px",
-          wordWrap: "break-word",
-          overflowWrap: "break-word",
-          hyphens: "auto"
-        }}>
-          Currently working as a Software Engineer at <strong style={{ color: "var(--text-primary)" }}>Estatic Infotech Pvt. Ltd</strong>,
-          developing healthcare and wearable-integrated applications. Leading development on the
-          <strong style={{ color: "var(--text-primary)" }}> Band Sync health app</strong>, processing live wearable data
-          including sleep, heart rate, HRV, workouts, and calories. Implementing data synchronization pipelines,
-          real-time updates, and <strong style={{ color: "var(--text-primary)" }}>AI-driven health insights</strong> for personalized coaching features.
-        </p>
-
-        <div
-          style={{
-            marginTop: "3rem",
-            display: "flex",
-            gap: "1.5rem",
-            flexWrap: "wrap",
-          }}
-        >
-          <a
-            href={cvPdf}
-            download="Singh_Riya_Anand_Resume.pdf"
-            className="btn-primary"
-            style={{
-              textDecoration: "none",
-              display: "inline-block",
-            }}
-          >
-            Download CV
-          </a>
+          <div className="hero-actions">
+            <a
+              href={cvPdf}
+              download="Singh_Riya_Anand_Resume.pdf"
+              className="btn-primary"
+              style={{ textDecoration: "none" }}
+            >
+              Download Resume
+            </a>
+            <a href="#contact" className="btn-outline">
+              Contact Me
+            </a>
+          </div>
         </div>
+
+        <aside className="hero-panel">
+          <p className="hero-panel-label">At a glance</p>
+          <div className="hero-stat-list">
+            {quickStats.map((item) => (
+              <div key={item} className="hero-stat-chip">
+                {item}
+              </div>
+            ))}
+          </div>
+
+          <div className="hero-highlight">
+            <p className="hero-highlight-title">Current focus</p>
+            <p>
+              Wearable-integrated healthcare products, real-time health data
+              processing, and user-friendly product experiences that stay strong
+              under production load.
+            </p>
+          </div>
+        </aside>
       </div>
     </section>
   );
