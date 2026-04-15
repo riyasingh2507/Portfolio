@@ -1,4 +1,4 @@
-import SectionTitle from "../components/SectionTitle";
+import SectionTitle from "../components/sectionTitle";
 
 const contacts = [
   { label: "Location", value: "Ahmedabad, Gujarat 380015" },

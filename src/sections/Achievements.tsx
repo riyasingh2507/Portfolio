@@ -1,4 +1,4 @@
-import SectionTitle from "../components/SectionTitle";
+import SectionTitle from "../components/sectionTitle";
 
 const achievements = [
   "NPTEL Online Certificate",
