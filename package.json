@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:pages": "tsc -b && vite build --base=/Portfolio/",
     "lint": "eslint .",
     "preview": "vite preview",  
-    "predeploy": "npm run build",
+    "predeploy": "npm run build:pages",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
