@@ -5,6 +5,10 @@ const metrics = [
   "Heart rate and HRV processing",
   "Workout and calorie insights",
   "Real-time sync across wearable flows",
+  "EHR-aligned health modules",
+  "Insights-driven coaching features",
+  "League game mechanics for user engagement",
+  "Group-based health challenges and competitions",
 ];
 
 const stack = [

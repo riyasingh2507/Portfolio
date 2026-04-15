@@ -14,9 +14,10 @@ const Hero = () => {
           <p className="eyebrow">Software Engineer • Full Stack Developer</p>
 
           <h1>
-            Riya Singh builds reliable products for healthcare, operations, and
-            real-time user experiences.
+            Riya Singh
           </h1>
+          <h3>builds reliable products for healthcare, operations, and
+            real-time user experiences.</h3>
 
           <p className="hero-lead">
             Full Stack Software Engineer based in Ahmedabad, crafting scalable

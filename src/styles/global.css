@@ -61,7 +61,7 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(3.3rem, 7vw, 6rem);
+  font-size: clamp(3.3rem, 7vw, 3rem);
   margin-bottom: 1.4rem;
   max-width: 12ch;
 }
@@ -132,6 +132,7 @@ button,
   border-radius: var(--card-radius);
   box-shadow: var(--shadow-md);
   backdrop-filter: blur(14px);
+  padding: 20px;
 }
 
 ul {
@@ -225,8 +226,9 @@ ul li::before {
 .three-up-grid,
 .two-up-grid,
 .experience-stack {
-  display: grid;
-  gap: 1.25rem;
+  display: flex;
+  flex-flow: wrap;
+  gap:10px;
 }
 
 .hero-stat-chip,
@@ -279,6 +281,7 @@ ul li::before {
 .skill-card,
 .timeline-card {
   padding: 1.8rem;
+  width: 80vw;
 }
 
 .timeline-card {
@@ -317,9 +320,11 @@ ul li::before {
 }
 
 .badge-row {
-  grid-template-columns: repeat(auto-fit, minmax(120px, max-content));
   align-items: start;
   margin-top: 1.25rem;
+  display: flex;
+  flex-flow: wrap;
+  gap: 10px;
 }
 
 .pill {
@@ -327,6 +332,7 @@ ul li::before {
   color: var(--accent-primary);
   border: 1px solid rgba(194, 100, 61, 0.16);
   width: fit-content;
+  white-space: nowrap;
 }
 
 .achievement-card {
