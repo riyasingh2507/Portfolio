@@ -1,31 +1,27 @@
 import SectionTitle from "../components/SectionTitle";
 
 const achievements = [
-  "Awarded 2nd Rank in National Seminar on Application of Mathematics — Recognized for excellence in mathematical problem-solving and algorithmic thinking",
-  "NPTEL Online Certificate — Introduction to Web Development — Comprehensive understanding of modern web development principles and practices",
-  "Coursera Certifications — Introduction to Web Development & Interactivity with JavaScript — Advanced proficiency in JavaScript programming and full-stack web development",
+  "NPTEL Online Certificate",
+  "Coursera: Introduction to Web Development",
+  "Coursera: Interactivity with JavaScript",
+  "2nd Rank in the National Seminar on Application of Mathematics",
 ];
 
 const Achievements = () => {
   return (
     <section>
       <SectionTitle
-        title="Achievements & Certifications"
-        subtitle="Recognition for technical excellence, continuous learning, and contributions to software engineering."
+        title="Certifications & Recognition"
+        subtitle="A mix of academic recognition and continuous learning that supports my practical engineering work."
       />
 
-      <div
-        className="card"
-        style={{
-          padding: "2.5rem",
-          maxWidth: "900px",
-        }}
-      >
-        <ul style={{ paddingLeft: 0, lineHeight: "1.9" }}>
-          {achievements.map((item) => (
-            <li key={item} style={{ marginBottom: "1rem" }}>{item}</li>
-          ))}
-        </ul>
+      <div className="card achievement-card">
+        {achievements.map((item) => (
+          <div key={item} className="achievement-item">
+            <span className="achievement-dot" />
+            <p>{item}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

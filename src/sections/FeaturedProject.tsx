@@ -1,94 +1,55 @@
 import SectionTitle from "../components/SectionTitle";
 
+const metrics = [
+  "Sleep and recovery tracking",
+  "Heart rate and HRV processing",
+  "Workout and calorie insights",
+  "Real-time sync across wearable flows",
+];
+
+const stack = [
+  "React.js",
+  "Node.js",
+  "MongoDB",
+  "WebSocket / Real-Time",
+  "Wearable integrations",
+  "AI-driven insights",
+];
+
 const FeaturedProject = () => {
   return (
     <section>
       <SectionTitle
-        title="Featured Project"
-        subtitle="A production-grade health and fitness platform leveraging real-time wearable device integration and AI-powered analytics."
+        title="Featured Work"
+        subtitle="Band Sync is the strongest representation of my current product engineering work: real-time data, user-facing health features, and production-grade integration."
       />
 
-      <div className="card" style={{ padding: "2.5rem" }}>
-        <h3 style={{ marginBottom: "1rem", color: "var(--accent-primary)" }}>
-          Band Sync — Wearable-Integrated Health Application
-        </h3>
+      <div className="card feature-spotlight">
+        <div className="feature-spotlight-copy">
+          <p className="timeline-kicker">Band Sync</p>
+          <h3>Wearable-integrated health tracking application</h3>
+          <p>
+            Band Sync brings live wearable data into a usable health product
+            experience. I work on the application flows and backend behavior
+            that turn raw metrics into synchronized dashboards, coaching inputs,
+            and healthcare-ready modules.
+          </p>
 
-        <p style={{ marginBottom: "2rem", maxWidth: "900px", fontSize: "1.1rem", lineHeight: "1.9" }}>
-          A comprehensive health and fitness application that processes live wearable data to deliver
-          personalized health insights. The Band Sync app seamlessly integrates with wearable devices
-          to collect, synchronize, and analyze physiological data streams in real-time, enabling
-          users to track their health metrics and receive AI-driven coaching recommendations.
-        </p>
-
-        <div style={{ marginBottom: "2rem" }}>
-          <h4 style={{ marginBottom: "1rem", color: "var(--text-primary)" }}>
-            Physiological Data Processing
-          </h4>
-          <ul style={{ paddingLeft: 0, marginBottom: 0 }}>
-            <li>Sleep architecture and sleep stage analysis</li>
-            <li>Heart rate (HR) monitoring and trend analysis</li>
-            <li>Heart rate variability (HRV) metrics and recovery indicators</li>
-            <li>Resting heart rate (RHR) tracking and baseline calculations</li>
-            <li>Workout session tracking and performance metrics</li>
-            <li>Caloric expenditure and energy balance computations</li>
-          </ul>
-        </div>
-
-        <div style={{ marginBottom: "2rem" }}>
-          <h4 style={{ marginBottom: "1rem", color: "var(--text-primary)" }}>
-            Technology Stack
-          </h4>
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "0.75rem",
-              marginBottom: "1rem",
-            }}
-          >
-            {["React.js", "Node.js", "MongoDB", "Real-Time Technologies", "Data Synchronization Pipelines", "AI-Driven Insights", "Wearable SDKs"].map(
-              (tech) => (
-                <span
-                  key={tech}
-                  style={{
-                    padding: "0.5rem 1rem",
-                    borderRadius: "6px",
-                    background: "rgba(99, 102, 241, 0.15)",
-                    color: "var(--accent-primary)",
-                    fontSize: "0.9rem",
-                    fontWeight: 500,
-                    border: "1px solid rgba(99, 102, 241, 0.3)",
-                  }}
-                >
-                  {tech}
-                </span>
-              )
-            )}
+          <div className="badge-row">
+            {stack.map((item) => (
+              <span key={item} className="pill">
+                {item}
+              </span>
+            ))}
           </div>
         </div>
 
-        <div>
-          <h4 style={{ marginBottom: "1rem", color: "var(--text-primary)" }}>
-            Key Technical Achievements
-          </h4>
-          <ul style={{ paddingLeft: 0, lineHeight: "1.9" }}>
-            <li>
-              Processing live wearable data streams including sleep patterns, heart rate (HR),
-              heart rate variability (HRV), workout sessions, and caloric expenditure
-            </li>
-            <li>
-              Implementing robust data synchronization pipelines that ensure real-time updates
-              and seamless integration between wearable devices and the application backend
-            </li>
-            <li>
-              Developing AI-driven health insights and coaching features that analyze user
-              physiological data to provide personalized recommendations and actionable health
-              guidance
-            </li>
-            <li>
-              Building scalable backend architecture capable of handling high-volume concurrent
-              data streams with optimized performance and reliability
-            </li>
+        <div className="feature-spotlight-panel">
+          <p className="hero-panel-label">Core capabilities</p>
+          <ul>
+            {metrics.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
           </ul>
         </div>
       </div>
